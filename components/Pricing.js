@@ -9,15 +9,6 @@ function Pricing() {
             highlight: false
         },
         {
-            name: "1 Year",
-            price: "$5.99",
-            period: "/mo",
-            billed: "Billed $71.88 yearly",
-            description: "Smart choice for consistent privacy and savings.",
-            features: ["10 Devices", "All Server Locations", "Malware Protection", "Standard Support"],
-            highlight: false
-        },
-        {
             name: "2 Years",
             price: "$3.99",
             period: "/mo",
@@ -25,8 +16,18 @@ function Pricing() {
             description: "Maximum savings for long-term protection.",
             features: ["Unlimited Devices", "Dedicated IP Option", "Ad & Tracker Blocker", "24/7 Priority Support", "3 Months Free"],
             highlight: true
+        },
+        {
+            name: "1 Year",
+            price: "$5.99",
+            period: "/mo",
+            billed: "Billed $71.88 yearly",
+            description: "Smart choice for consistent privacy and savings.",
+            features: ["10 Devices", "All Server Locations", "Malware Protection", "Standard Support"],
+            highlight: false
         }
     ];
+
 
     return (
         <section id="pricing" className="py-24 px-6">
