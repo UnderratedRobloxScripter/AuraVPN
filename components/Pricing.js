@@ -2,55 +2,65 @@ function Pricing() {
     const plans = [
         {
             name: "Monthly",
-            price: "$12.95",
+            price: "$9.99",
             period: "/mo",
-            description: "Flexible protection for short-term needs.",
+            description: "Perfect for trying the service with full flexibility.",
             features: ["5 Devices", "All Server Locations", "High-Speed Streaming", "No-Logs Policy"],
             highlight: false
         },
         {
-            name: "2 Years",
-            price: "$2.19",
-            period: "/mo",
-            billed: "Billed $52.56 every 2 years",
-            description: "Best value for long-term security.",
-            features: ["Unlimited Devices", "Dedicated IP Option", "Ad & Tracker Blocker", "24/7 Priority Support", "3 Months Free"],
-            highlight: true
-        },
-        {
             name: "1 Year",
-            price: "$4.99",
+            price: "$5.99",
             period: "/mo",
-            billed: "Billed $59.88 yearly",
-            description: "Balanced choice for consistent privacy.",
+            billed: "Billed $71.88 yearly",
+            description: "Smart choice for consistent privacy and savings.",
             features: ["10 Devices", "All Server Locations", "Malware Protection", "Standard Support"],
             highlight: false
+        },
+        {
+            name: "2 Years",
+            price: "$3.99",
+            period: "/mo",
+            billed: "Billed $95.76 every 2 years",
+            description: "Maximum savings for long-term protection.",
+            features: ["Unlimited Devices", "Dedicated IP Option", "Ad & Tracker Blocker", "24/7 Priority Support", "3 Months Free"],
+            highlight: true
         }
     ];
 
     return (
-        <section id="pricing" className="py-24 px-6" data-name="pricing" data-file="components/Pricing.js">
+        <section id="pricing" className="py-24 px-6">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center max-w-2xl mx-auto mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-6">Premium privacy.<br/>Accessible price.</h2>
-                    <p className="text-gray-400">30-day money-back guarantee on all plans.</p>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-6">
+                        Premium privacy.<br/>Accessible price.
+                    </h2>
+                    <p className="text-gray-400">
+                        30-day money-back guarantee on all plans.
+                    </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
                     {plans.map((plan, index) => (
                         <div key={index} className={`relative glass-panel rounded-3xl p-8 transition-transform duration-300 ${plan.highlight ? 'scale-105 border-purple-500/50 bg-purple-900/10 z-10 shadow-[0_0_40px_rgba(124,58,237,0.2)]' : 'hover:scale-105'}`}>
+                            
                             {plan.highlight && (
                                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider shadow-lg">
                                     Best Value
                                 </div>
                             )}
-                            
+
                             <h3 className="text-xl font-semibold mb-2">{plan.name}</h3>
+
                             <div className="flex items-end gap-1 mb-1">
                                 <span className="text-4xl font-bold text-white">{plan.price}</span>
                                 <span className="text-gray-400 mb-1">{plan.period}</span>
                             </div>
-                            {plan.billed && <p className="text-xs text-purple-300 mb-4">{plan.billed}</p>}
+
+                            {plan.billed && (
+                                <p className="text-xs text-purple-300 mb-4">{plan.billed}</p>
+                            )}
+
                             <p className="text-gray-400 text-sm mb-8 leading-relaxed border-b border-white/5 pb-8">
                                 {plan.description}
                             </p>
