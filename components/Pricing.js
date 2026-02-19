@@ -10,18 +10,18 @@ function Pricing() {
         },
         {
             name: "2 Years",
-            price: "$3.99",
+            price: "$4.99",
             period: "/mo",
-            billed: "Billed $95.76 every 2 years",
+            billed: "Billed $119.76 every 2 years",
             description: "Maximum savings for long-term protection.",
             features: ["Unlimited Devices", "Dedicated IP Option", "Ad & Tracker Blocker", "24/7 Priority Support", "3 Months Free"],
             highlight: true
         },
         {
             name: "1 Year",
-            price: "$5.99",
+            price: "$6.99",
             period: "/mo",
-            billed: "Billed $71.88 yearly",
+            billed: "Billed $83.88 yearly",
             description: "Smart choice for consistent privacy and savings.",
             features: ["10 Devices", "All Server Locations", "Malware Protection", "Standard Support"],
             highlight: false
